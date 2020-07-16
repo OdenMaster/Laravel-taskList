@@ -182,10 +182,28 @@ php artisan make:controller [controller_name]
     `(resources/views/)`
     ``` php
     Route::get('/', function () {
-        <!-- return view('welcome'); -->
-        return view('task');
+        // return view('welcome');
+        return view('taskList');
     });
     ```
+
+    - モデルからデータを取得し`$tasks`としてviewに渡す
+        ``` php
+        Route::get('/', function () {
+            $alltasks = \App\task::all();
+            return view('taskList', ['tasks' => $alltasks]);
+        });
+        ```
+    
+    - taskList.blade側にてテンプレートで取り出す
+        ``` html
+        <ul>
+            @foreach ($tasks as $task)
+                {{-- comment in template --}}
+                <li>{{ $task->task_name }}</li>
+            @endforeach
+        </ul>
+        ```
 
 ### テストデータ作成
 Fakerはダミーデータを生成  
