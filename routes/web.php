@@ -14,5 +14,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+
+    $alltasks = \App\task::all();
+    // $alltasks[0] = 'hiroshi';
+    return view('taskList', ['tasks' => $alltasks]);
+    // return view('taskList');
+    // return view('welcome');
 });
