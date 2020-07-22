@@ -1,7 +1,19 @@
-# Laravel First App --TaskList--
+# Laravel First App -TaskList-  
+<a href="https://www.youtube.com/">公開ページ</a>  
 <time>2020-07-14</time>
 
 ## アプリ概要
+    1行
+
+## アプリ機能一覧
+
+## アプリで使用している技術
+    インフラに使用しているもの
+    使用データベース
+    セッション管理の方法
+    画像アップロードのライブラリ
+    デプロイ方法
+
 
 ## 作成メモ
 
@@ -281,6 +293,9 @@ php artisan make:seeder taskSeeder
     ``` Console
     composer require fzaninotto/faker
     ```
+
+
+
 
 
 ## その他

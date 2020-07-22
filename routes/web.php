@@ -13,11 +13,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
 
-    $alltasks = \App\task::all();
-    // $alltasks[0] = 'hiroshi';
-    return view('taskList', ['tasks' => $alltasks]);
-    // return view('taskList');
-    // return view('welcome');
-});
+// コントローラー名＠アクション
+Route::get('/', 'TaskController@index');
+Route::get('/edit', 'TaskController@edit');
+
+
+// Route::get('/', function () {
+//     $alltasks = \App\task::all();
+//     // $alltasks[0] = 'hiroshi';
+//     return view('task_list', ['tasks' => $alltasks]);
+//     // return view('taskList');
+//     // return view('welcome');
+// });
