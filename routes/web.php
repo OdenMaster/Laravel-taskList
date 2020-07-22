@@ -21,8 +21,7 @@ Route::get('/edit', 'TaskController@edit');
 
 // Route::get('/', function () {
 //     $alltasks = \App\task::all();
-//     // $alltasks[0] = 'hiroshi';
+//     // $alltasks[0] = hiroshi';
 //     return view('task_list', ['tasks' => $alltasks]);
 //     // return view('taskList');
-//     // return view('welcome');
 // });
