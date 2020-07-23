@@ -1,3 +1,14 @@
 h1{
     background-color: #0ff;
 }
+
+th {
+    height: 100px;
+}
+
+.uk-navbar-brand:before, .uk-navbar-content:before, .uk-navbar-toggle:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
