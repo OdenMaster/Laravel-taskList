@@ -14,14 +14,28 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-// コントローラー名＠アクション
-Route::get('/', 'TaskController@index');
-Route::get('/edit', 'TaskController@edit');
+// controller@acition(method)
+Route::get('/', 'TasksController@index');
+Route::get('/editList', 'TasksController@editList');
+// Route::resource('/task/{$id}', 'TasksController@edit');
+
+// Route::post('task/task', 'TasksController@store');
+// Route::post('task/delete/{id}', 'Tas ksController@delete');
+Route::resource('task', 'TasksController');
 
 
+
+// Route::get('/task/{$id}', 'TasksController@edit');
+// Route::get('/task{$id}', function(){
+//     return view('task_edit');
+// });
+// '/edit', 'TasksController@edit');
+// Route::get('/edit/{id}', 'TasksController@edit');
+
+
+// controllerを経由しない場合。変数を渡すことも可能
 // Route::get('/', function () {
 //     $alltasks = \App\task::all();
-//     // $alltasks[0] = hiroshi';
 //     return view('task_list', ['tasks' => $alltasks]);
-//     // return view('taskList');
+//     return view('task_list');
 // });

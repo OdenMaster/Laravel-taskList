@@ -1,6 +1,11 @@
 @extends('layouts.master')
-@section('title','タスク編集')
+@section('title','編集')
 @section('content')
-    <h1>タスク編集</h1>
-    <a class="uk-button uk-button-default" href="">編集</a>
+<form action="/task/{{$task->id}}" method="post">
+    @csrf
+    @method('patch')
+    {{-- <label for="title">タスク</label> --}}
+<input name="task" value="{{$task->task_name}}" placeholder="" required>
+    <button type="submit" class="uk-button uk-button-default">送信</button>
+</form>
 @endsection
