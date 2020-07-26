@@ -23,7 +23,7 @@
                 <ul class="uk-navbar-nav">
                     <li class="uk-active"><a href="{{ url('/', []) }}">Frontpage</a></li>
                     <li class="uk-active"><a href="{{ url('/editList', []) }}">EDIT</a></li>
-                    <li class="uk-active"><a href="{{ url('/task', []) }}">THE★TASK</a></li>
+                    <li class="uk-active"><a href="{{ url('/welcome', []) }}">Welcome(default)</a></li>
                 </ul>
 
                 {{-- <div class="uk-navbar-item">

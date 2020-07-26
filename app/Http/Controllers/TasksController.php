@@ -18,6 +18,11 @@ class TasksController extends Controller
         // dd($tasks);
         // 取得した値をビューへ渡す
         return view('task_list', compact('tasks'));
+        // return view('welcome');
+    }
+    public function welcome()
+    {
+        return view('welcome');
     }
 
     // Route::resource
