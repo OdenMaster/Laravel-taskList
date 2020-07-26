@@ -17,6 +17,7 @@ use Illuminate\Support\Facades\Route;
 
 // controller@acition(method)
 Route::get('/', 'TasksController@index');
+Route::get('/welcome', 'TasksController@welcome');
 Route::get('/editList', 'TasksController@editList');
 Route::get('/close/{id}','TasksController@closeTask');
 Route::resource('task', 'TasksController');
@@ -27,3 +28,27 @@ Route::resource('task', 'TasksController');
 //     return view('task_list', ['tasks' => $alltasks]);
 //     return view('task_list');
 // });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
