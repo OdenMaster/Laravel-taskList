@@ -27,14 +27,3 @@ Mix.dispatch('init', Mix);
 let WebpackConfig = require('../src/builder/WebpackConfig');
 
 module.exports = new WebpackConfig().build();
-
-// module.exports = {
-//     module: {
-//       rules: [
-//         {
-//           test: /\.css$/i,
-//           use: ['style-loader', 'css-loader'],
-//         },
-//       ],
-//     },
-//   };
