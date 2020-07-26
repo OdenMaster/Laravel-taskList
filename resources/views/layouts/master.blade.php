@@ -37,11 +37,11 @@
                     </form>
                 </div>
 
-                <div class="uk-navbar-item">
-                    <form action="javascript:void(0)">
-
-                        <input class="uk-input uk-form-width-medium" name="task" placeholder="タスクを入力">
-                        <button class="uk-padding-small uk-padding-remove-vertical uk-button uk-button-primary" type="button" onclick="location.href='task/create'">作成</button>
+                <div id="div_simple_register" class="uk-navbar-item visible-hidden">
+                    <form action="task" method="post">
+                        @csrf
+                        <input class="uk-input uk-form-width-medium" name="task" placeholder="タスクを入力" required>
+                        <button class="uk-padding-small uk-padding-remove-vertical uk-button uk-button-primary" type="submit">作成</button>
                         {{-- <button class="uk-button uk-button-default">追加</button> --}}
                     </form>
                 </div>
