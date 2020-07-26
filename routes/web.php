@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\TasksController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,14 +15,15 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-// コントローラー名＠アクション
-Route::get('/', 'TaskController@index');
-Route::get('/edit', 'TaskController@edit');
+// controller@acition(method)
+Route::get('/', 'TasksController@index');
+Route::get('/editList', 'TasksController@editList');
+Route::get('/close/{id}','TasksController@closeTask');
+Route::resource('task', 'TasksController');
 
-
+// controllerを経由しない場合。変数を渡すことも可能
 // Route::get('/', function () {
 //     $alltasks = \App\task::all();
-//     // $alltasks[0] = hiroshi';
 //     return view('task_list', ['tasks' => $alltasks]);
-//     // return view('taskList');
+//     return view('task_list');
 // });

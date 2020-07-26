@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use app\task;
+use App\task;
 
 class TaskController extends Controller
 
